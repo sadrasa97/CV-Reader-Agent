@@ -1,0 +1,96 @@
+JOHN DOE
+john.doe@example.com | +1-555-0123 | linkedin.com/in/johndoe
+
+═══════════════════════════════════════════════════════════════════════════════
+
+PROFESSIONAL SUMMARY
+
+Senior Backend Engineer with 6 years of progressive experience in designing and deploying scalable cloud-based systems. Expertise in Python, AWS, microservices architecture, and DevOps practices. Proven track record of improving system performance by 40% and reducing infrastructure costs. Strong leadership skills with experience mentoring junior developers.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+TECHNICAL SKILLS
+
+Programming Languages: Python, JavaScript, Go, Java, SQL
+Cloud & Infrastructure: AWS (EC2, S3, Lambda, RDS, CloudFront), Docker, Kubernetes, Terraform
+Frameworks & Libraries: FastAPI, Django, Flask, SQLAlchemy, asyncio
+Databases: PostgreSQL, MongoDB, Redis, Elasticsearch
+DevOps & Tools: Jenkins, GitLab CI/CD, Docker Compose, Helm, Prometheus, Grafana
+Architecture: Microservices, REST APIs, GraphQL, Event-Driven Architecture, CQRS
+
+═══════════════════════════════════════════════════════════════════════════════
+
+PROFESSIONAL EXPERIENCE
+
+SENIOR BACKEND ENGINEER | Tech Innovations Inc. | Jan 2021 – Present
+San Francisco, CA
+
+• Led design and implementation of microservices architecture serving 2M+ daily active users
+• Reduced API response time from 500ms to 300ms through database optimization and caching (Redis)
+• Implemented comprehensive monitoring and alerting system using Prometheus and Grafana, reducing incident response time by 60%
+• Mentored team of 4 junior engineers through code reviews and technical training
+• Architected and deployed Kubernetes cluster handling 10K+ requests per second
+• Migrated monolithic application to microservices, improving deployment frequency from monthly to daily
+• Established CI/CD pipeline using GitLab CI reducing deployment time from 1 hour to 15 minutes
+
+KEY ACHIEVEMENTS:
+- Designed rate-limiting system that prevented DDoS attacks and reduced infrastructure costs by 30%
+- Implemented feature flags system enabling safe rollouts and A/B testing
+- Led migration of 50+ legacy systems to cloud with zero downtime
+
+BACKEND ENGINEER | Digital Solutions LLC | Jun 2019 – Dec 2020
+Austin, TX
+
+• Developed and maintained RESTful APIs using FastAPI and Python, serving 500K+ requests/day
+• Implemented real-time notification system using WebSockets and Redis, supporting 100K concurrent connections
+• Optimized database queries reducing average query time by 45% and saving $50K annually
+• Built automated testing framework achieving 85% code coverage
+• Implemented automated deployment pipeline reducing manual errors by 95%
+
+JUNIOR DEVELOPER | StartUp Tech | Jan 2018 – May 2019
+Austin, TX
+
+• Contributed to development of customer-facing web application using Python and JavaScript
+• Participated in code reviews and helped maintain code quality standards
+• Assisted in AWS infrastructure setup and maintenance
+• Implemented data validation and error handling for critical business logic
+
+═══════════════════════════════════════════════════════════════════════════════
+
+EDUCATION
+
+Bachelor of Science in Computer Science
+University of Texas at Austin | Graduated: May 2018
+GPA: 3.7/4.0
+
+Relevant Coursework: Distributed Systems, Database Design, Software Engineering, Cloud Computing
+
+═══════════════════════════════════════════════════════════════════════════════
+
+CERTIFICATIONS & TRAINING
+
+• AWS Certified Solutions Architect - Professional (2022)
+• AWS Certified Developer - Associate (2021)
+• Docker Certified Associate (2021)
+• Certified Kubernetes Administrator (CKA) – In Progress
+• Linux Academy: Advanced Python for DevOps (2021)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ADDITIONAL PROJECTS & CONTRIBUTIONS
+
+Open Source Contributions
+• Contributor to FastAPI project – Fixed bugs and improved documentation
+• Maintainer of popular Python library for async task processing – 2K+ GitHub stars
+
+Side Projects
+• Built real-time data analytics platform using Python, FastAPI, and React
+• Developed CLI tool for infrastructure automation reducing manual work by 20 hours/week
+• Created educational content about microservices architecture (10K+ views on YouTube)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+LANGUAGES
+
+English (Native)
+Spanish (Professional Working Proficiency)

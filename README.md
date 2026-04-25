@@ -328,6 +328,10 @@ Contributions welcome! Areas for enhancement:
 - Performance optimizations
 - Additional LLM models
 
+## 📄 License
+
+MIT License - see LICENSE file
+
 ## ⭐ Acknowledgments
 
 Built with:

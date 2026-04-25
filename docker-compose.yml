@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: cv-reader-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0:11434
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - cv-reader-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: cv-reader-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cv-reader-net
+
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cv-reader-fastapi
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - REDIS_URL=redis://redis:6379/0
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./app:/app/app
+      - ./data:/app/data
+    depends_on:
+      ollama:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cv-reader-net
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: cv-reader-streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://fastapi:8000
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./ui:/app/ui
+      - ./data:/app/data
+    depends_on:
+      fastapi:
+        condition: service_healthy
+    networks:
+      - cv-reader-net
+    command: streamlit run ui/app.py --server.port=8501 --server.address=0.0.0.0
+
+volumes:
+  ollama_data:
+  redis_data:
+
+networks:
+  cv-reader-net:
+    driver: bridge
