@@ -50,7 +50,7 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed system design.
 
 ```bash
 # Clone repository
-git clone <repo-url>
+git clone https://github.com/sadrasa97/CV-Reader-Agent.git
 cd cv-reader-agent-pipeline
 
 # Copy environment file
@@ -180,7 +180,7 @@ When you query "Who is best for Senior Python Engineer?":
 2. **Tool Selection**: Invokes `search_candidate` tool
 3. **Vector Search**: Queries ChromaDB for matching candidates
 4. **Ranking**: Scores by relevance (0-1)
-5. **Post-Processing**: Formats response as Pydantic model
+5. **Post-Processing**: Formats response as Pydantic mode
 6. **Response**: Returns structured results with evidence
 
 ### Async CV Processing
